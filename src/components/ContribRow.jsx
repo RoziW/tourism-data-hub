@@ -110,7 +110,7 @@ const del = async () => { if (confirm(t.confirmDelete)) await deleteContribution
       </div>
     </div>
   </div>
-)}i
+)}
     {c.data.description && <Detail label="Description" value={c.data.description} />}
     {c.data.bestVisitMonths && <Detail label="Best visit" value={c.data.bestVisitMonths} />}
     {c.data.worstVisitMonths && <Detail label="Worst visit" value={c.data.worstVisitMonths} />}
