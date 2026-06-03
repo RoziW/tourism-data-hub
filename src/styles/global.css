@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg-deep: #f7f4ef;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf8f5;
+  --bg-input: #f0ede6;
+  --border: #e2ddd4;
+  --border-focus: #c8863a;
+  --accent: #c8863a;
+  --accent-dim: rgba(200,134,58,0.1);
+  --accent-glow: rgba(200,134,58,0.05);
+  --green: #2d8b5e;
+  --green-dim: rgba(45,139,94,0.1);
+  --red: #c0493a;
+  --red-dim: rgba(192,73,58,0.08);
+  --blue: #3a7fc0;
+  --blue-dim: rgba(58,127,192,0.08);
+  --text: #2c2418;
+  --text-dim: #7a7062;
+  --text-muted: #bdb5a8;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --font-heading: "Crimson Pro", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-arabic: "Noto Sans Arabic", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[dir="rtl"] { font-family: var(--font-arabic); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+input:focus, textarea:focus, select:focus { border-color: var(--accent) !important; outline: none; box-shadow: 0 0 0 3px rgba(200,134,58,0.12); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .6; } }
