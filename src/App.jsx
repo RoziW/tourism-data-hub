@@ -22,7 +22,7 @@ export default function App() {
   const [editingId, setEditingId] = useState(null);
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 1000);
   const [loaded, setLoaded] = useState(false);
 
   const t = T[lang];
