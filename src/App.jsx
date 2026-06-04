@@ -23,6 +23,16 @@ export default function App() {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 1000);
+
+// Auto-close sidebar on small screens
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth <= 1000) setSidebarOpen(false);
+  };
+  window.addEventListener("resize", handleResize);
+  handleResize(); // Run once on mount
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
   const [loaded, setLoaded] = useState(false);
 
   const t = T[lang];
